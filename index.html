@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ejemplo</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #555c62; /* Color gris */
+        }
+
+        .navbar a {
+            color: white; /* Color del texto de los enlaces */
+            margin-right: 80px; /* Espacio entre los elementos de la barra */
+        }
+
+        .search-bar {
+            background-color: white; /* Fondo blanco para el buscador */
+        }
+
+        .ms-auto {
+            margin-left: auto; /* Empuja el buscador a la derecha */
+        }
+
+        .main-content {
+            padding: 20px 0;
+        }
+
+        /* Estilo para las opciones en cards horizontales */
+        .option-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #e9ecef; /* Color de fondo para las cards */
+            padding: 15px;
+            margin-bottom: 6px; /* Espacio entre las cards */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
+        /* Estilo para las cards de texto */
+        .text-card {
+            background-color: #f8f9fa; /* Color de fondo más claro para las cards */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 20px;
+            margin-bottom: 20px; /* Espacio entre las cards */
+        }
+
+        /* Estilos para el texto dentro de las cards */
+        .newspaper-text {
+          column-gap: 20px; /* Espacio entre columnas */
+        }
+
+        /* Por defecto, muestra 3 columnas */
+        .newspaper-text {
+            column-count: 3; 
+        }
+
+        /* Para pantallas medianas (tablet y similares) */
+        @media (max-width: 768px) {
+            .newspaper-text {
+                column-count: 2; /* 2 columnas en pantallas medianas */
+            }
+        }
+
+        /* Para pantallas pequeñas (móviles) */
+        @media (max-width: 576px) {
+            .newspaper-text {
+                column-count: 1; /* 1 columna en pantallas pequeñas */
+            }
+        }
+
+        .newspaper-text p {
+            text-align: justify; /* Justifica el texto en los párrafos */
+            break-inside: avoid; /* Evita que los párrafos se dividan entre columnas */
+        }
+
+
+        /* Estilo para las columnas dentro de las cards */
+        .column {
+            break-inside: avoid; /* Evita que se dividan en medio */
+            padding: 0 10px; /* Espaciado interno */
+        }
+
+        .option-card {
+          display: flex;
+          align-items: center;          /* Mantiene la alineación vertical */
+          justify-content: flex-start;  /* Alinea el texto a la izquierda */
+          background-color: white;      /* Fondo blanco para las cards */
+          padding: 15px;                /* Espaciado interno */
+          margin-bottom: 0px;           /* Espacio entre las cards (ajustado) */
+          border: 1px solid #ccc;       /* Borde gris claro */
+          border-radius: 5px;           /* Bordes redondeados */
+          text-decoration: underline;    /* Subraya el texto */
+        }
+
+        h1 {
+            text-align: center; /* Centra el título */
+            margin-top: 30px; /* Espacio arriba del título */
+            margin-bottom: 30px; /* Espacio debajo del título */
+        }
+
+        p {
+            text-align: center; /* Centra el párrafo */
+            margin-bottom: 30px; /* Espacio debajo del párrafo */
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TOLKIEN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Arda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">La Comarca</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Númenor</a>
+                    </li>
+                </ul>
+
+                <!-- Buscador -->
+                <form class="d-flex ms-auto" id="searchForm">
+                    <input class="form-control search-bar me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="container">
+            <h1>El Diario Íntimo de J. R. R. Tolkien</h1>
+            <p>Explora las mejores ofertas y encuentra todo lo que necesitas.</p>
+
+            <div class="row">
+                <!-- Columna 1 con opciones -->
+                <div class="col-3">
+                    <div class="option-card">
+                        <span>Opción 1</span>
+                    </div>
+                    <div class="option-card">
+                        <span>Opción 2</span>
+                    </div>
+                    <div class="option-card">
+                        <span>Opción 3</span>
+                    </div>
+                    <div class="option-card">
+                        <span>Opción 4</span>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Card 1 -->
+                <div class="col-9">
+                    <div class="text-card">
+                      <div class="newspaper-text">
+                        <p>John Ronald Reuel Tolkien (3 de enero de 1892 - 2 de septiembre de 1973), a menudo citado como J. R. R. Tolkien, fue un escritor, poeta, filólogo, lingüista y profesor universitario británico, nacido en el Estado Libre de Orange (hoy parte de Sudáfrica). Conocido principalmente por ser el autor de El hobbit y El Señor de los Anillos.</p>
+                        <p>De 1925 a 1945, Tolkien ocupó la cátedra Rawlinson y Bosworth en la Universidad de Oxford, enseñando anglosajón y, de 1945 a 1959, fue profesor de Lengua y Literatura inglesa en Merton. Era amigo cercano del también escritor C. S. Lewis y ambos eran miembros de un informal grupo de debate literario conocido como los Inklings.</p>
+                        <p>Tolkien fue nombrado Comendador de la Orden del Imperio Británico por la reina Isabel II el 28 de marzo de 1972.Después de su muerte, el tercer hijo de Tolkien, Christopher, publicó una serie de obras basadas en las amplias notas y manuscritos inéditos de su padre, entre ellas El Silmarillion y Los hijos de Húrin.</p>
+                    </div>
+                  </div>
+                    <!-- Columna 3: Card 2 -->
+                  <div class="col-9">
+                    <div class="text-card">
+                        <div class="newspaper-text">
+                            <p class="column">Contenido de la Card 2, sección 1. Texto para la segunda card.</p>
+                            <p class="column">Contenido de la Card 2, sección 2. Continúa con más información aquí.</p>
+                            <p class="column">Contenido de la Card 2, sección 3. Añadiendo más detalles relevantes.</p>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Columna 4: Card 3 -->
+                  <div class="col-9">
+                    <div class="text-card">
+                        <div class="newspaper-text">
+                            <p class="column">Contenido de la Card 3, sección 1. Comenzando con un nuevo tema.</p>
+                            <p class="column">Contenido de la Card 3, sección 2. Texto adicional para dar contexto.</p>
+                            <p class="column">Contenido de la Card 3, sección 3. Cerrando con un resumen final.</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts de Bootstrap y JavaScript personalizado -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
