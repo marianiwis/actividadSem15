@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Ejemplo</title>
+    <title>Prince of Darkness</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
@@ -37,17 +37,6 @@
             padding: 20px 0;
         }
 
-        /* Estilo para las opciones en cards horizontales */
-        .option-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #e9ecef; /* Color de fondo para las cards */
-            padding: 15px;
-            margin-bottom: 6px; /* Espacio entre las cards */
-            border-radius: 5px; /* Bordes redondeados */
-        }
-
         /* Estilo para las cards de texto */
         .text-card {
             background-color: #f8f9fa; /* Color de fondo más claro para las cards */
@@ -57,13 +46,11 @@
         }
 
         /* Estilos para el texto dentro de las cards */
-        .newspaper-text {
-          column-gap: 20px; /* Espacio entre columnas */
-        }
-
         /* Por defecto, muestra 3 columnas */
         .newspaper-text {
+            column-gap: 20px; /* Espacio entre columnas */
             column-count: 3; 
+            padding: 20px; 
         }
        
         /* Para pantallas medianas (tablet y similares) */
@@ -94,14 +81,15 @@
 
         .option-card {
           display: flex;
-          align-items: center;          /* Mantiene la alineación vertical */
-          justify-content: flex-start;  /* Alinea el texto a la izquierda */
+          align-items: center;          /* Mantiene la alineación vertical*/
+          justify-content: space-between;  /* Alinea el texto a la izquierda */
           background-color: white;      /* Fondo blanco para las cards */
           padding: 15px;                /* Espaciado interno */
-          margin-bottom: 0px;           /* Espacio entre las cards (ajustado) */
+          margin-bottom: 0px;           /* Espacio entre las cards (ajustado)*/
           border: 1px solid #ccc;       /* Borde gris claro */
-          border-radius: 5px;           /* Bordes redondeados */
-          text-decoration: underline;    /* Subraya el texto */
+          border-radius: 5px;           /* Bordes redondeados*/
+          border-radius: 5px;           /* Bordes redondeados*/
+          text-decoration: underline;    /* Subraya el texto*/
         }
 
         h1 {
@@ -121,27 +109,6 @@
             padding: 30px;
         }
 
-        /* Estilo para ocultar el menú normal en pantallas pequeñas */
-        @media (max-width: 992px) {
-            .normal-nav {
-                display: none; /* Oculta la navegación normal */
-            }
-            .sidenav {
-                display: flex; /* Muestra la navegación en sándwich */
-                flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-            }
-        }
-
-        /* Para pantallas grandes */
-        @media (min-width: 993px) {
-            .sidenav {
-                display: none; /* Oculta la navegación en sándwich */
-            }
-            .normal-nav {
-                display: flex; /* Muestra la navegación normal */
-            }
-        }
-
     </style>
 </head>
 
@@ -153,10 +120,15 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Navegación normal (visible en pantallas grandes) -->
-            <div class="collapse navbar-collapse normal-nav" id="navbarNav">
-                <ul class="navbar-nav me-auto">
+    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Barra de búsqueda (ordenada primero en pantallas medianas o menores) -->
+                <form class="d-flex ms-auto order-md-1 order-0 mb-2 mb-md-0" role="search">
+                    <input class="form-control me-2 search-bar" type="search" placeholder="Buscar" aria-label="Search">
+                </form>
+    
+                <!-- Navegación (aparece después de la barra de búsqueda en pantallas medianas o menores) -->
+                <ul class="navbar-nav me-auto mb-2 mb-md-0 order-md-0 order-1">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Arda</a>
                     </li>
@@ -166,23 +138,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Númenor</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Opciones
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Opción 1</a></li>
-                            <li><a class="dropdown-item" href="#">Opción 2</a></li>
-                            <li><a class="dropdown-item" href="#">Opción 3</a></li>
-                            <li><a class="dropdown-item" href="#">Opción 4</a></li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
-        </div>
-            
-</div>
-             
         </div>
     </nav>
 
@@ -203,16 +160,6 @@
                         <p>No es desesperanza lo que nos mueve a seguir luchando, sino la esperanza en cosas que nunca se vieron</p>
                     </div>
                 </div>
-            
-                <!-- Controles del Carrusel -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#paragraphCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#paragraphCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
             </div>
         
             <div class="row">
